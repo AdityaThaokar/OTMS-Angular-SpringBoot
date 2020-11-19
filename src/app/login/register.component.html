@@ -1,0 +1,73 @@
+<html>
+<style>
+.myDiv {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+  height: 600px;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  font-size: 150%
+}
+p
+{
+   font-size: 170%;
+   background-color: #fefbd8;
+}
+h1
+{
+ font-size: 170%;
+ text-decoration: bold;
+ text-align: left;
+}
+h5
+{
+text-align: left;
+}
+</style>
+<br>
+<br>
+      <div class="myDiv">
+        <p>Welcome to Online Test Management System!</p>
+        <h1>Register</h1>
+        <h5>Please register before you start...</h5>
+        <br>
+        <table class="table table-striped">
+            <tr>
+               <th>User Id*</th>
+               <td><input type=text [(ngModel)]="login.userId"></td>
+            </tr>
+            <tr>
+                <th>Password*</th>             
+                <td><input type=text [(ngModel)]="login.password"></td>
+            </tr>
+            <tr>
+                <th>User Name</th>
+                <td><input type=text [(ngModel)]="login.userName"></td>
+            </tr>
+            <!--<tr>
+                <th>Phone number</th>
+                <td><input type=text [(ngModel)]="login.phoneNo"></td>
+            </tr>-->
+            <tr>
+                <th>Role**</th>
+                <td><input type=text [(ngModel)]="login.role"></td>
+            </tr>
+             
+             </table>
+               <div>
+               <button (click)= "register()" class="btn btn-lg btn-success btn-block"> Register </button>
+               Already have an account?<a href="http://localhost:4200/getlogin">Login</a>
+               </div>
+              <br>
+              <h5>(*) indicates compulsory fields!</h5>
+           
+
+</div>
+</html>
+
+            
+            
+          
+             

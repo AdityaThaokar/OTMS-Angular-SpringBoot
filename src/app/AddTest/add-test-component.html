@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/AdminHome">Home</a>
+        <a class="nav-item nav-link" routerLink="/QuestionList">Help(Question Details)</a>
+        <a class="nav-item nav-link" routerLink="/Gettests">Help(Test Details)</a>
+    </div>
+</nav>
+<br>
+<div style="text-align:center">
+  <!--<h1>
+    Welcome to {{ title }}!
+  </h1>-->
+    <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/admin.jpg" width="304" height="236"></div></ng-template>  
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/assign.jpg" width="304" height="236"></div></ng-template>  
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/add.jpg" width="304" height="236"></div></ng-template> 
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/delete.jpg" width="304" height="236"></div></ng-template>  
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/update.jpg" width="304" height="236"></div></ng-template> 
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/test.jpg" width="304" height="236"></div></ng-template>  
+  </owl-carousel-o>
+</div>
+<html>
+<style>
+  li{text-color: white}
+  p{ color :red;text-align : right}
+  button{
+    text-align:right;
+}
+ </style>
+    <body>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+     <div style= color:white> Adding Test Details..</div>
+     </nav>
+     <br>
+     <br>
+        <table class="table table-sm">
+            <tr>
+               <th>Test Id</th>
+               <td><input type=text [(ngModel)]="test.testId"></td>
+            </tr>
+            <tr>
+                <th>Test Date</th>
+                <td><input type=text [(ngModel)]="test.testDate"/></td>
+             </tr>
+            <tr>
+               <th>Test Title</th>
+               <td><input type=text [(ngModel)]="test.testTitle"/></td>
+            </tr>
+            <tr>
+               <th>Test Duration</th>
+               <td><input type=text [(ngModel)]="test.testDuration"/></td>
+            </tr>
+            <tr>
+                <th>Test TotalMarks</th>
+                <td><input type=text [(ngModel)]="test.testTotalMarks"/></td>
+             </tr>
+             <br><br>
+             <tr>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <button class="btn btn-primary active" type="button" (click)="insertTest()">Add Test Details</button><br><br>
+               </tr>
+            
+    </table>
+    </body>
+</html>

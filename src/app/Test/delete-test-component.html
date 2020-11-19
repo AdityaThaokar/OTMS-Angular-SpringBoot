@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/AdminHome">Home</a>
+        <a class="nav-item nav-link" routerLink="/QuestionList">Help(Question Details)</a>
+        <a class="nav-item nav-link" routerLink="/Gettests">Help(Test Details)</a>
+    </div>
+</nav>
+<br>
+<div style="text-align:center">
+  <!--<h1>
+    Welcome to {{ title }}!
+  </h1>-->
+    <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/admin.jpg" width="304" height="236"></div></ng-template>  
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/assign.jpg" width="304" height="236"></div></ng-template>  
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/add.jpg" width="304" height="236"></div></ng-template> 
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/delete.jpg" width="304" height="236"></div></ng-template>  
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/update.jpg" width="304" height="236"></div></ng-template> 
+    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/test.jpg" width="304" height="236"></div></ng-template>  
+  </owl-carousel-o>
+</div>
+<html>
+<style>
+  li{text-color: white}
+  p{ color :red;text-align : right}
+  button{
+    text-align:right;
+}
+ </style>
+    <body>
+        <p>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap 4 Alert with Additional Content</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+	.bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example"> 
+    <div class="alert alert-warning alert-dismissible fade show">
+        <h4 class="alert-heading"><i class="fa fa-warning"></i> Warning!</h4>
+        <p>Here is the section where deletion of data will take place, it is an activity where data cannot be bought back, so be sure about the main details(here it is the TestId).</p>
+        <hr>
+        <p class="mb-0">In case any doubts arise, please reach out to the "help" in navigation bar!</p>
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+</div>
+</body>
+</html>                            
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+     <div style= color:white> Deleting Question Details..</div>
+     </nav>
+     <br>
+     <br>
+         <table class="table table-sm">
+            <tr>
+               <th>Test Id</th>
+               <td><input type=text [(ngModel)]="test.testId"></td>
+            </tr>
+            <tr>
+                <th>Test Date</th>
+                <td><input type=text [(ngModel)]="test.testDate"/></td>
+             </tr>
+            <tr>
+               <th>Test Title</th>
+               <td><input type=text [(ngModel)]="test.testTitle"/></td>
+            </tr>
+            <tr>
+               <th>Test Duration</th>
+               <td><input type=text [(ngModel)]="test.testDuration"/></td>
+            </tr>
+            <tr>
+                <th>Test TotalMarks</th>
+                <td><input type=text [(ngModel)]="test.testTotalMarks"/></td>
+             </tr>
+             <br>
+             <tr>
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+               <button data-toggle="tooltip" data-placement="left" title="Just enter the TestId, the rest of the details will be auto-displayed" class="btn btn-primary active" type="button" (click)="getTestDetails()">Get Test Details</button>
+               &nbsp;
+               <button class="btn btn-danger active" type="button" (click)="deleteTest()">Delete Test Details</button>
+            </tr>
+           <br>
+         </table>
+     
+  </body>
+</html>
