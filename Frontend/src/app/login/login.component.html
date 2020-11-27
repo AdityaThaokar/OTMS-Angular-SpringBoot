@@ -3,48 +3,52 @@
 <head>
 <style>
 .myDiv {
-  border: 5px outset red;
-  background-color: lightblue;    
+  background-color: rgb(231, 231, 231);    
   text-align: center;
-  height: 650px;
-  width: 30%;
+  height: auto;
+  width: 20%;
   margin: auto;
-  padding: 10px;
-  font-size: 150%
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 2%;
 }
 .button {
   background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 5px 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   margin: 4px 2px;
   cursor: pointer;
 }
-img {
-  border-radius: 50%;
-  border: 5px outset red;
+
+h6{
+    margin-left: 4px;
+    margin-top : 10px;
+    font-size: 14px;
 }
-p
-{
-   background-color: #fefbd8;
+p{   
+  text-align: center;
+  height: auto;
+  margin: auto;
+  padding: 15px;
+  font-size: 22px;
+  text-decoration: none;
 }
 </style>
 </head>
 <br><br><br>
 <body>
+    <p>Sign in to Portal</p>
 <div class="myDiv">
-  <form >
-           <p>Lets get started!!</p>
-           <img src="./assets/login.png" style="width:200px">
+
+  <form >          
             <div class="form-group">
-                <label>User Id:</label>
-                <input  type=text class="form-control" name="userId" [(ngModel)]="login.userId"><br>
-                <label>Password:</label>
-                <input type=password class="form-control" name="password" [(ngModel)]="login.password"><br>
+                <input  type=text class="form-control" style="font-size: 14px;" placeholder = "User Id" name="userId" [(ngModel)]="login.userId"><br>
+                <input type=password class="form-control" style="font-size: 14px;" placeholder = "Password" name="password" [(ngModel)]="login.password"><br>
             </div>
             <!--<label>Role:</label>
             <div class="form-check">
@@ -61,7 +65,8 @@ p
                     Admin
                 </label>
             </div>-->
-        <button (click)="getLogin()" class="btn btn-success btn-lg btn-block">Log In</button>
+        <button (click)="getLogin()" class="btn btn-success btn-lg btn-block" style="font-size: 14px;">Log In</button>
+        <h6>New User ? Sign up <a href="http://localhost:4200/register">here</a></h6>
         </form>
 </div>
 
