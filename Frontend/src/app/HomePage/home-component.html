@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar navbar-expand-sm  navbar-light">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/AdminHome">Home</a>
         <a class="nav-item nav-link" routerLink="/QuestionList">Help(Question Details)</a>
@@ -8,11 +8,16 @@
         <a class="nav-item nav-link" routerLink="/">Logout</a>
     </div>
 </nav>
-<br>
 <style>
 .success {
   background-color: #ddffdd;
   border-left: 10px solid #4CAF50;
+  width:auto;
+}
+.btn{
+  width :300px;
+  font-size: 14px;
+  align-self: center;
 }
 </style>
 <div class="success">
@@ -22,14 +27,7 @@
   <!--<h1>
     Welcome to {{ title }}!
   </h1>-->
-    <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/admin.jpg" width="304" height="236"></div></ng-template>  
-    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/assign.jpg" width="304" height="236"></div></ng-template>  
-    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/add.jpg" width="304" height="236"></div></ng-template> 
-    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/delete.jpg" width="304" height="236"></div></ng-template>  
-    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/update.jpg" width="304" height="236"></div></ng-template> 
-    <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/test.jpg" width="304" height="236"></div></ng-template>  
-  </owl-carousel-o>
+
 </div>
 <!--<style>
 .success {
@@ -43,17 +41,16 @@
 
 <div class="container">
 <div class="text-center">
-<br><br>
 <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/Addtest">Add Test Details  ➥ </button>
-<br><br>
+<br>
 <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/Updatetest">Update Test Details  ➥ </button>
-<br><br>
+<br>
 <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/Deletetest">Delete Test Details  ➥ </button>
-<br><br>
+<br>
 <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/Insert">Add Question Details  ➥ </button>
-<br><br>
+<br>
 <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/Update">Update Question Details  ➥ </button>
-<br><br>
-<button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/Question">Delete Question Details  ➥ </button>
+<br>
+<button type="button" class="btn btn-danger btn-lg btn-block" routerLink="/Question">Delete Question Details  ➥ </button>
 </div>
 </div>
