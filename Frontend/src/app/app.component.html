@@ -34,8 +34,32 @@
     <ng-template carouselSlide><div class="mx-auto" style="width: 350px;"><img src="./assets/test.jpg" width="304" height="236"></div></ng-template>  
   </owl-carousel-o>
 </div>-->
-<a routerLink="/getlogin">Login</a>&nbsp; <a routerLink="/register">Register</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Online Test Management System</a>
 
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+      </li>
+      <li class="nav-item">
+        
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/getlogin">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+      </ul>
+    </form>
+  </div>
+</nav>
   
 
 <!-- main content container -->
