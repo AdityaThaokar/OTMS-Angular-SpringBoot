@@ -25,8 +25,8 @@ header {
 nav {
   float: left;
   width: 20%;
-  height: 5000px; /* only for demonstration, should be removed */
-  background: #ccc;
+  height: auto; /* only for demonstration, should be removed */
+  background: rgb(255, 255, 255);
   padding: 20px;
 }
 
@@ -41,8 +41,10 @@ article {
   padding: 20px;
   width: 60%;
   font-size: 25px;
-  background-color: #f1f1f1;
-  height: 5000px; /* only for demonstration, should be removed */
+  background-color: #f8f9fa;
+  border: solid rgb(218, 218, 218) 1px;
+  border-radius: 5px;
+  height: auto; /* only for demonstration, should be removed */
 }
 
 /* Clear floats after the columns */
@@ -59,7 +61,13 @@ footer {
   text-align: center;
   color: white;
 }
-
+.instructions{
+  padding :10px;
+  font-size: 12px;
+  background-color: white;
+  border-radius: 5px;
+  color:rgb(93, 93, 93);
+}
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   nav, article {
@@ -68,31 +76,29 @@ footer {
   }
 }
 .myDiv {   
-  height: 750px;
+  height: auto;
   width: 30%;
-  font-size: 70%
+  font-size: 70%;
+  color:black;
+  margin-top: 10px;
 }
 </style>
 </head>
 <body>
-
-<header>
-  <h2>All the best!!</h2>
-</header>
 
 <section>
   <nav>
   <a class="nav-item nav-link" routerLink="/User">Home</a>
  <a class="nav-item nav-link" routerLink="/">Logout</a>
   </nav>
-  
+  <br>
   <article>
     <form>
-     <div style="border: solid black 1px">
-     <h1><b>INSTRUCTIONS</b></h1>
-     <p><i>• The quiz contains 15 question with 3 options each, with only 'one' right option.</i></p>
-     <p><i>• No negative marking, so try and attempt all the questions.</i></p>
-     <p><i>• Un-Answered questions will be considered as wrong, 'zero' marks will be awarded.</i></p>
+     <div style="border: solid rgb(202, 201, 201) 1px" class="instructions">
+     <h4><b>INSTRUCTIONS</b></h4>
+     <p>• The quiz contains 15 question with 3 options each, with only 'one' right option.<br>
+      • No negative marking, so try and attempt all the questions.<br>
+      • Un-Answered questions will be considered as wrong, 'zero' marks will be awarded.</p>
      </div>
      <br>
      <div *ngFor="let q of questions;let i = index">
@@ -104,16 +110,11 @@ footer {
               <input type="checkbox" value="2" class="check-form-input" (click)="getSelectedOption(2,i)">{{q.option2}}</div> 
             <div class="form-check">
                <input type="checkbox" value="3" class="check-form-input" (click)="getSelectedOption(3,i)">{{q.option3}}</div>
-           <br><br>
       </div>
 </form>
-<br>
-                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                 &nbsp; &nbsp; &nbsp; &nbsp;
-<button class="btn btn-primary active" type="button" (click)="getQuestions()">Take Test!</button>
+<button class="btn btn-success " type="button" (click)="getQuestions()">Take Test</button>
 &nbsp;
-<button class="btn btn-primary active" type="button" (click)="getMarks()">Submit Test!</button>
+<button class="btn btn-danger " type="button" (click)="getMarks()">Submit Test</button>
           <div class="myDiv">
            <div *ngIf="displayMarks">
                 <ul *ngFor="let a of ans;let i = index">
@@ -128,10 +129,6 @@ footer {
          </div>
   </article>
 </section>
-     <footer>
-
-   <p>You can take the test multiple times, till you achieve a full score or if your satisfied, you can logout!</p>
-</footer>
 
 </body>
 </html>
