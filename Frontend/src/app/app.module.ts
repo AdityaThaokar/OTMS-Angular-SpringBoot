@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { QuestionListComponent } from './Question';
 import { FormQuizComponent } from './Question';
 import { CommonModule } from '@angular/common';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+//import { CarouselModule } from 'ngx-owl-carousel-o';
 import { UserComponent } from './UserDashboard';
 import { LoginModule } from './login/login.module';
 import { AddTestService } from './AddTest/add-service';
@@ -45,7 +45,6 @@ import { DeleteTestComponent } from './Test';
     FormsModule, 
     CommonModule,
     BrowserModule,
-    CarouselModule,
     LoginModule,
     AppRoutingModule
     
