@@ -38,8 +38,10 @@ nav ul {
 
 article {
   float: left;
+  margin-left: 40px;
+  margin-top:10px;
   padding: 20px;
-  width: 60%;
+  width: 65%;
   font-size: 25px;
   background-color: #f8f9fa;
   border: solid rgb(218, 218, 218) 1px;
@@ -77,22 +79,46 @@ footer {
 }
 .myDiv {   
   height: auto;
-  width: 30%;
-  font-size: 70%;
-  color:black;
+  float: right;
+  width:25%;
+  font-size: 14px;
   margin-top: 10px;
+  background-color:rgb(68, 68, 68);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  padding:20px ;
+  margin-right: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>
 </head>
 <body>
 
 <section>
-  <nav>
-  <a class="nav-item nav-link" routerLink="/User">Home</a>
+  <!--<nav>
+  
  <a class="nav-item nav-link" routerLink="/">Logout</a>
-  </nav>
+  </nav>-->
   <br>
-  <article>
+      <div *ngIf="displayMarks" class="myDiv">
+        <h4 style="text-align: center;font-weight: 600;">Report Card</h4>
+        <hr color="white">
+        <h6 style="text-align: center;font-weight:500;">Marks Scored : {{marks}}</h6>
+        <hr color="white">
+           <ul *ngFor="let a of ans;let i = index">
+              <li> 
+                Question No: {{i+1}} : 
+                  <p *ngIf="a!=0 else elseblock">Correct</p>
+                  <ng-template #elseblock>Wrong</ng-template>
+              </li>
+           </ul> 
+           <hr color="white">
+           <div style="align-items:center;">
+            <button class="btn btn-success " style="width:100%;"type="button" routerLink="/User">Exit Test</button> 
+          </div>
+                  
+      </div>
+  <article> 
     <form>
      <div style="border: solid rgb(202, 201, 201) 1px" class="instructions">
      <h4><b>INSTRUCTIONS</b></h4>
@@ -114,19 +140,8 @@ footer {
 </form>
 <button class="btn btn-success " type="button" (click)="getQuestions()">Take Test</button>
 &nbsp;
-<button class="btn btn-danger " type="button" (click)="getMarks()">Submit Test</button>
-          <div class="myDiv">
-           <div *ngIf="displayMarks">
-                <ul *ngFor="let a of ans;let i = index">
-                   <li> 
-                       <p>Question No: {{i+1}} :</p> 
-                       <p *ngIf="a!=0 else elseblock">Correct</p>
-                       <ng-template #elseblock>Wrong</ng-template>
-                   </li>
-                </ul>
-                <p>Marks Scored {{marks}}</p> 
-           </div>
-         </div>
+<button class="btn btn-danger " type="button" [disabled]="clicked"  (click)="getMarks(); clicked = true;">Submit Test</button>
+
   </article>
 </section>
 
