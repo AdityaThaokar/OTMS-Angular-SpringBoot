@@ -12,6 +12,7 @@ export class FormQuizComponent implements OnInit
    ans:any[]=[];
    marks:number=0;
    displayMarks:boolean=false;
+   clicked :boolean=false;
     public constructor(private questionService:QuestionService){}
     public getQuestions():void
     {
@@ -20,6 +21,7 @@ export class FormQuizComponent implements OnInit
         
     getMarks():void
      {
+ 
          for(var i=0;i<this.questions.length;i++)
          {
               console.log(this.questions[i].answerOption+'   selected option '+this.ans[i]);
