@@ -119,7 +119,8 @@ footer {
                   
       </div>
   <article> 
-    <form>
+    <form >
+      
      <div style="border: solid rgb(202, 201, 201) 1px" class="instructions">
      <h4><b>INSTRUCTIONS</b></h4>
      <p>• The quiz contains 15 question with 3 options each, with only 'one' right option.<br>
@@ -127,21 +128,25 @@ footer {
       • Un-Answered questions will be considered as wrong, 'zero' marks will be awarded.</p>
      </div>
      <br>
-     <div *ngFor="let q of questions;let i = index">
-       <div style="text-decoration:bold;" >{{q.questionId}}. {{q.questionContent}}</div>
+     <button class="btn btn-success " type="button" (click)="getQuestions()">Take Test</button>
+     <hr>
+     
+     <div *ngFor="let q of questions;let i = index" style="font-size: 16px; font-weight: 500;text-align: left;margin-left:10px">
+       <div style="text-decoration:bold;" >Qu. {{q.questionId}}. {{q.questionContent}}</div>
          <!--<div>{{q.questionContent}}</div>-->
           <div class="form-check">
-            <input type="checkbox" value="1" class="check-form-input"  (click)="getSelectedOption(1,i)">{{q.option1}}</div> 
+            <input type="checkbox" class="form-check-input" value="1" class="check-form-input"  (click)="getSelectedOption(1,i)">&nbsp;{{q.option1}}</div> 
             <div class="form-check">
-              <input type="checkbox" value="2" class="check-form-input" (click)="getSelectedOption(2,i)">{{q.option2}}</div> 
+              <input type="checkbox" class="form-check-input" value="2" class="check-form-input" (click)="getSelectedOption(2,i)">&nbsp;{{q.option2}}</div> 
             <div class="form-check">
-               <input type="checkbox" value="3" class="check-form-input" (click)="getSelectedOption(3,i)">{{q.option3}}</div>
-      </div>
-</form>
-<button class="btn btn-success " type="button" (click)="getQuestions()">Take Test</button>
-&nbsp;
-<button class="btn btn-danger " type="button" [disabled]="clicked"  (click)="getMarks(); clicked = true;">Submit Test</button>
+               <input type="checkbox" class="form-check-input" value="3" class="check-form-input" (click)="getSelectedOption(3,i)">&nbsp;{{q.option3}}</div>
+          <hr>
+              </div>
+          <p style="text-align: center;color: rgb(132, 132, 132);font-size: 20px;">All The Best !</p>
+     <hr>
+          <button class="btn btn-danger " style="float:right;"type="button" [disabled]="clicked"  (click)="getMarks(); clicked = true;">Submit Test</button>
 
+</form>
   </article>
 </section>
 
