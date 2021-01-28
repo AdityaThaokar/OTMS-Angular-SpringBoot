@@ -1,16 +1,18 @@
 <html>
+  <title>Sign up</title>
 <style>
 .myDiv {
-    background-color: rgb(231, 231, 231);    
+  background-color: rgb(231, 231, 231);    
   text-align: center;
   height: auto;
-  width:25%;
+  width:30%;
   margin: auto;
-  padding: 15px;
+  padding: 20px;
   font-size: 14px;
   border-radius: 2%;   
   text-align: center;
   height: auto;
+  font-family: 'Rubik'!important;
 }
 p,h1,h5
 {
@@ -20,6 +22,7 @@ p,h1,h5
   padding: 15px;
   font-size: 22px;
   text-decoration: none;
+  font-family: 'Rubik'!important;
 }
 .button {
   background-color: #2188ff;
@@ -36,39 +39,39 @@ p,h1,h5
 </style>
 <br>
 <br>
-<h1>Welcome, Create your account</h1>
+<div class="imgs" style="position: fixed;right: 40px;margin-top:30px ;">
+  <img src="./assets/signup.png" alt="" width="500px"> 
+</div>
+<h1 style="color:#172949;">Welcome, Create your account</h1>
       <div class="myDiv">
+        <div class="row" style="font-size: 12px;padding-bottom: 10px;" *ngIf="showMsg">
+          <p style="font-size: 12px;" class="alert alert-danger" >
+              <strong>Enter all the required fields!!</strong>
+          </p>
+      </div>
         <table class="table table-borderless">
             <tr>
-               <td><input class="form-control" style="font-size: 14px;" placeholder = "User Id*" type=text [(ngModel)]="login.userId"></td>
+               <td><input class="form-control"  placeholder = "User Id*" type="text" [(ngModel)]="login.userId"></td>
             </tr>
             <tr>           
-                <td><input class="form-control" style="font-size: 14px;" placeholder = "Password*" type=text [(ngModel)]="login.password"></td>
+                <td><input class="form-control"  placeholder = "Password*" type="text" [(ngModel)]="login.password"></td>
             </tr>
             <tr>
-                <td><input class="form-control" style="font-size: 14px;" placeholder = "User Name" type=text [(ngModel)]="login.userName"></td>
+                <td><input class="form-control"  placeholder = "User Name" type="text" [(ngModel)]="login.userName"></td>
             </tr>
-            <!--<tr>
-                <th>Phone number</th>
-                <td><input type=text [(ngModel)]="login.phoneNo"></td>
-            </tr>-->
             <tr>
-                <td><input class="form-control" style="font-size: 14px;" placeholder = "Role*" type=text [(ngModel)]="login.role"></td>
-            </tr>
-             
+                <td><input class="form-control" placeholder = "Branch ? CS /SS" type="text" [(ngModel)]="login.role"></td>
+            </tr>     
              </table>
-             <h6 style="font-size: 12px;color:#757575">(*) indicates compulsory fields!</h6>
+             <h6 style="font-size: 12px;color:#172949;">(*) indicates compulsory fields!</h6>
                <div>
                <button (click)= "register()" class="btn btn-lg btn-info btn-block" style="font-size: 14px;width:100%;height: auto;
-               margin: auto;"> Register </button>
-               
+               margin: auto;"> Register </button>              
                </div>
-              <br>
-              <h6 style="font-size: 14px;">Already have an account ? <a href="http://localhost:4200/getlogin">Login</a></h6>
-              
-           
-
 </div>
+<br>
+<h6 style="font-size: 12px;color:#172949;text-align:center;font-family: 'Rubik'!important;">Already have an account ? <a href="http://localhost:4200/getlogin">Login</a></h6>
+
 </html>
 
             

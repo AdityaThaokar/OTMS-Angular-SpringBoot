@@ -10,5 +10,4 @@ public class OnlineTestManagementEurekaServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OnlineTestManagementEurekaServerApplication.class, args);
 	}
-
 }

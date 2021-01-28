@@ -32,7 +32,7 @@ export class QuestionComponent implements OnInit
     },
     nav: true
   }
-   question:Question=new Question(0,'','','','',0,0.0);
+   question:Question=new Question(0,0,'','','','',0,0.0);
    q
    public constructor(private questionService:QuestionService, private router :Router){}
    public getQuestion():void
@@ -53,7 +53,7 @@ export class QuestionComponent implements OnInit
       var r = confirm("Are you sure to delete question details?");
       if(r==true)
       {
-      this.questionService.deleteQuestion(this.question.questionId).subscribe();
+      this.questionService.deleteQuestion(this.question.testId,this.question.questionId).subscribe();
       this.router.navigate(['/QuestionList']);
       }
       else

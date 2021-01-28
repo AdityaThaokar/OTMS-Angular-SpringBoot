@@ -8,32 +8,7 @@ import {Router} from '@angular/router';
 })
 export class InsertComponent implements OnInit
 {
-   customOptions: any = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    navSpeed: 1000,
-    navText: ['←', '→'],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: true
-  }
-   question:Question=new Question(0,'','','','',0,0.0);
-   q
+   question:Question=new Question(0,0,'','','','',0,0.0);
    public constructor(private insertService:InsertService, private router :Router){}
    public insertQuestion() : void
    {
@@ -50,7 +25,6 @@ export class InsertComponent implements OnInit
    }
    ngOnInit()
    {
-      //this.getBook();
    }
 
 }

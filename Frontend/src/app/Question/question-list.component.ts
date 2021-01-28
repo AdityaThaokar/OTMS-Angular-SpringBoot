@@ -7,35 +7,20 @@ import { Question } from './question';
 })
 export class QuestionListComponent implements OnInit
 {
-    customOptions: any = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    navSpeed: 1000,
-    navText: ['←', '→'],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: true
-  }
+   testId : number; 
     questions:Question[];
     public constructor(private questionService:QuestionService){}
-    public getQuestions():void
+
+    
+    public getQuestions(testId: number):void
     {
-       this.questionService.getQuestions().subscribe(data => this.questions=data);
+      this.testId = testId;
+       this.questionService.getQuestions(testId).subscribe(data => this.questions=data);
+       console.log(this.testId)
+    }
+    public getAllQuestions():void
+    {
+       this.questionService.getAllQuestions().subscribe(data => this.questions=data);
     }
     ngOnInit(){}
 }

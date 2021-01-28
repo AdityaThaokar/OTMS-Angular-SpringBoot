@@ -13,13 +13,17 @@ export class QuestionService
    {
       return this.httpClient.get<any>('http://localhost:8092/getQuestion/'+questionId);
    }
-   public getQuestions() : Observable<Question[]>
+   public getQuestions(testId: number) : Observable<Question[]>
    {
-      return this.httpClient.get<Question[]>('http://localhost:8092/getQuestions');
+      return this.httpClient.get<Question[]>('http://localhost:8092/getQuestions/'+testId);
    }
-   public deleteQuestion(questionId:number) : any
+   public deleteQuestion(testId:number,questionId:number) : any
    {
-       return this.httpClient.delete<any>('http://localhost:8092/deleteQuestion/'+questionId);
+       return this.httpClient.delete<any>('http://localhost:8092/deleteQuestion/'+testId+'/'+questionId);
+   }
+   public getAllQuestions() : Observable<Question[]>
+   {
+      return this.httpClient.get<Question[]>('http://localhost:8092/getQuestions/');
    }
 
 } 

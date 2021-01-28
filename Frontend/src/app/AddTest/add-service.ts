@@ -22,4 +22,8 @@ export class AddTestService
    {
        return this.httpClient.post<any>('http://localhost:8093/addTest',test);
    }
+   public checkTestId(testId:Number) : any
+   {
+       return this.httpClient.get<Boolean>('http://localhost:8093/checkTestId/'+testId);
+   }
 }

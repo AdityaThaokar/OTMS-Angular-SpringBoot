@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student</title>
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-
-}
-
-/* Style the header */
-
-/* Create two columns/boxes that floats next to each other */
 nav {
   float: right;
   width: 30%;
-  height: auto; /* only for demonstration, should be removed */
+  height: auto;
   background-color: rgb(245, 245, 245);  
   padding: 10px;
   margin:50px;
@@ -29,7 +16,6 @@ nav {
   font-size: 14px;
 }
 
-/* Style the list inside the menu */
 nav ul {
   list-style-type: none;
   padding: 10px;
@@ -44,24 +30,13 @@ article {
   padding: 20px;
   width: 60%;
   margin:10px;
-  height: 560px; /* only for demonstration, should be removed */
+  height: 560px; 
 }
-h1{
-  color: rgb(46, 50, 137);
-}
-p{
-  color: rgb(115, 79, 79);
-}
-
-/* Clear floats after the columns */
 section:after {
   content: "";
   display: table;
   clear: both;
 }
-/* Style the footer */
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   nav, article {
     width: 100%;
@@ -71,30 +46,26 @@ section:after {
 </style>
 </head>
 <body>
-
 <section>
   <nav>
     <ul>
-      <li>Want to brushup? Click on ⇨ <a href="https://www.w3schools.com/cpp/">C++</a></li><button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/Quiz" >Ready to take test?(C++)</button>
+      <li><h4 style="text-align:center;font-weight: 700;color:#172949;" >Click to start the test </h4><hr></li>
+      <li></li><button type="button" class="btn btn-primary btn-lg btn-block" style="font-size: larger;padding:10px;font-weight: 700;" [routerLink]="['/Quiz', 1]">Advanced Algorithm <br> Analysis (AAC)</button>
       <br>
-      <li>Want to brushup? Click on ⇨ <a href="https://www.w3schools.com/java/java_intro.asp">Java</a></li><button type="button" data-toggle="tooltip" data-placement="left" title="This test will be active on Sunday ,31th May(7am to 7pm IST)" class="btn btn-primary btn-lg btn-block" >Ready to take test?(Java)</button>
+      <li></li><button type="button" data-toggle="tooltip" data-placement="left" style="font-size: larger;padding:10px;font-weight: 700;" class="btn btn-dark btn-lg btn-block" [routerLink]="['/Quiz', 2]">Advanced Computer <br> Networks (ACN)</button>
       <br>
-      <li>Want to brushup? Click on ⇨ <a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap</a></li><button type="button" data-toggle="tooltip" data-placement="left" title="This test will be active on Tuesday ,2nd June(7am to 7pm IST)" class="btn btn-primary btn-lg btn-block" > Ready to take test?(Bootstrap)</button>
+      <li></li><button type="button" data-toggle="tooltip" data-placement="left" style="font-size: larger;padding:10px;font-weight: 700;" class="btn btn-info btn-lg btn-block" [routerLink]="['/Quiz', 3]"> Object Oriented <br> Analysis and Desgin (OOAD)</button>
       <br>
-      <li>Want to brushup? Click on ⇨ <a href="https://www.w3schools.com/angular/">Angular</a></li><button title="Visit sometime later!" type="button" class="btn btn-primary btn-lg btn-block" >Ready to take test?(Angular)</button>
-      <br>
-      <li>Want to leave?<button class="btn btn-danger btn-md btn-block" routerLink="/">Logout</button></li>
+      <li></li><button title="Visit sometime later!" type="button" style="font-size: larger;padding:10px;font-weight: 700;"class="btn btn-success btn-lg btn-block"[routerLink]="['/Quiz', 4]">Advanced Operating <br> Systems (AOS)</button>
+      <li><hr><button class="btn btn-danger btn-md btn-block" routerLink="/">Logout</button></li>
     </ul>
-  </nav>
-  
+  </nav>  
   <article>
-    <h1 class="h1 display-1">Welcome Student</h1>
+    <h1 class="display-3" style="font-family: 'Rubik';">Welcome Student</h1>
     <p>We are delighted to have you among us. On behalf of all the members and the management, we would like to extend our warmest welcome and good wishes!</p>
-    <p>This platform helps you to know your command on a subject and improve yourself with more practice.<br>Do read and then give an attempt.</p>
-    <img src="./assets/bg.jpg" width="700px" alt="">
+    <p>This platform helps you to know your command on a subject and improve yourself with more practice.<br>Do read and then give an attempt.</p> <br>
+    <img src="./assets/bg.png" width="400px" alt="" style="margin-left: 200px;">
   </article>
 </section>
-
-
 </body>
 </html>

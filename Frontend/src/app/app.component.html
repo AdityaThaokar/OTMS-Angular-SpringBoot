@@ -1,36 +1,9 @@
-<!--<delete-question></delete-question>
-<question-list></question-list>-->
-<!-- nav -->
-<!--<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" routerLink="/QuestionList">Help(Question Details)</a>
-        <a class="nav-item nav-link" routerLink="/Gettests">Help(Test Details)</a>
-        <a class="nav-item nav-link" routerLink="Quiz">Test Format</a>
-        <a class="nav-item nav-link" routerLink="User">Dashboard</a>
-    </div>
-</nav>-->
-<!--<style>
-.success {
-  background-color: #ddffdd;
-  border-left: 10px solid #4CAF50;
-}
-</style>-->
-<!--<div class="success">
-  <p><strong>Login Successful!</strong> Welcome, Admin!!</p>
-</div>-->
-<!--<a routerLink="/getlogin">Login</a>
-<a routerLink="/register">Register</a>-->
-<!--<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Online Test Management System</a>
+  <a class="navbar-brand" href="/"><img src="./assets/icon.png" alt="" width="32px">
+    Online Test Management System</a>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
@@ -42,37 +15,13 @@
     <form class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/getlogin">Login/Logout</a>
+          <a class="nav-link" routerLink="/about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/register">Sign Up</a>
+          <a class="nav-link" routerLink="/contact">Contact</a>
         </li>
       </ul>
     </form>
   </div>
 </nav>
-  
-
-<!-- main content container -->
-
-<div>
-        <router-outlet></router-outlet>
-</div>
-<footer class="page-footer font-small blue">
-
-  <!-- Copyright -->
-<br>
-<br>  <div class="footer text-center py-1" style="color:rgb(125, 125, 125);font-weight: 400;font-size:12px;bottom: -16px;margin-bottom: 0px;width:100%;height:auto;background-color:  rgb(245, 245, 245);">OOAD Project By:
-      <div class="ftable" style="width:40%;height:auto;align-items:left;margin-left: auto;margin-right: auto;">
-        <table class="table table-borderless" style="height:auto;">
-            <tr style="color:rgb(125, 125, 125);padding:2px;height:auto;text-align: left;">
-              <td>Akalankam Sai Teja<br>Aditya Rokade</td>
-              <td>Aditya Thaokar<br> Shahid Nazir Shah</td>
-              <td>Vishal John Varghese<br> Atul</td>        
-            </tr>
-          </table>
-    </div>
-  </div>
-  <!-- Copyright -->
-
-</footer>
+<router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 export class Question
 {
+  testId: number;
   questionId:number;
   questionContent:string;
   option1:string;
@@ -7,8 +8,9 @@ export class Question
   option3:string;
   marks:number;
   answerOption:number;
-  public constructor(questionId:number,questionContent:string,option1:string,option2:string,option3:string,marks:number,answerOption:number)
+  public constructor(testId: number,questionId:number,questionContent:string,option1:string,option2:string,option3:string,marks:number,answerOption:number)
   {
+    this.testId=testId;
    this.questionId=questionId;
    this.questionContent=questionContent;
    this.option1=option1;

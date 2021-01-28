@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit
 {
   login:Login=new Login('','','',0,'');
+  showMsg:boolean = false;
   acode:string="160A61";
    public constructor(private loginService:LoginService, private router: Router){}
    public register():void
@@ -39,7 +40,8 @@ export class RegisterComponent implements OnInit
        }
        else
        {
-        alert("Enter all the required fields!");
+         this.showMsg =true
+        //alert("Enter all the required fields!");
        }
      } 
 
