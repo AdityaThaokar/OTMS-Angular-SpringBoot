@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+<style>
+.myDiv {
+  background-color: rgb(231, 231, 231);    
+  text-align: center;
+  height: auto;
+  width: 25%;
+  margin: auto;
+  padding: 20px;
+  font-size: 14px;
+  border-radius: 2%;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+h6{
+    margin-left: 4px;
+    margin-top : 10px;
+    font-size: 14px;
+    color: #172949;
+}
+p{   
+  text-align: center;
+  height: auto;
+  margin: auto;
+  padding: 15px;
+  font-size: 22px;
+  text-decoration: none;
+}
+</style>
+</head>
+<br><br><br>
+<div class="imgs" style="position: fixed;left: 40px;margin-top:30px ;">
+    <img src="./assets/login.png" alt="" width="500px"> 
+  </div>
+<body>
+    <div class="container-fluid" style="align-items: center;">
+    <p>Sign in to Portal</p>
+<div class="myDiv">
+    <div class="row" style="font-size: 12px;padding-bottom: 10px;" *ngIf="showMsg">
+        <p style="font-size: 12px;" class="alert alert-danger" >
+            <strong>Invalid Login Credentials!</strong>
+        </p>
+    </div>
+    <div class="row" style="font-size: 12px;padding-bottom: 10px;" *ngIf="showMsg1">
+        <p style="font-size: 12px;" class="alert alert-warning" >
+            <strong>Login Credentials are empty!</strong>
+        </p>
+    </div>
+    <form >          
+        <div class="form-group">
+            <input  type="text" class="form-control"  placeholder = "User Id" name="userId" [(ngModel)]="login.userId"><br>
+            <input type="password" class="form-control"  placeholder = "Password" name="password" [(ngModel)]="login.password">
+        </div>
+        <button (click)="getLogin()" class="btn btn-success btn-lg btn-block" style="font-size: 14px;">Log In</button>
+        <h6>New User ? Sign up <a href="http://localhost:4200/register">here</a></h6>
+    </form>
+</div>
+    <h6 style="text-align: center;font-size: 12px;font-weight:400">Forgot password ? click <a href="http://localhost:4200/contact">here</a></h6>
+</div>
+</body>
+</html>
+

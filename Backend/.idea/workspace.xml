@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54d915df-b50a-40fb-b838-68fa7910f452" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1kPw1D6IYIEXT1G0wqEykbULvK2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LoginService" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54d915df-b50a-40fb-b838-68fa7910f452" name="Default Changelist" comment="" />
+      <created>1605615316602</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605615316602</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="593" y="200" key="#Project_Structure" timestamp="1605616395632">
+      <screen x="67" y="24" width="1853" height="1056" />
+    </state>
+    <state x="593" y="200" key="#Project_Structure/67.24.1853.1056@67.24.1853.1056" timestamp="1605616395632" />
+    <state x="458" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605615410419">
+      <screen x="67" y="24" width="1853" height="1056" />
+    </state>
+    <state x="458" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.24.1853.1056@67.24.1853.1056" timestamp="1605615410419" />
+    <state x="839" y="431" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605615341500">
+      <screen x="67" y="24" width="1853" height="1056" />
+    </state>
+    <state x="839" y="431" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.24.1853.1056@67.24.1853.1056" timestamp="1605615341500" />
+    <state x="586" y="246" key="FileChooserDialogImpl" timestamp="1605616426344">
+      <screen x="67" y="24" width="1853" height="1056" />
+    </state>
+    <state x="586" y="246" key="FileChooserDialogImpl/67.24.1853.1056@67.24.1853.1056" timestamp="1605616426344" />
+    <state x="559" y="243" width="869" height="590" key="find.popup" timestamp="1605616340690">
+      <screen x="67" y="24" width="1853" height="1056" />
+    </state>
+    <state x="559" y="243" width="869" height="590" key="find.popup/67.24.1853.1056@67.24.1853.1056" timestamp="1605616340690" />
+  </component>
+</project>
